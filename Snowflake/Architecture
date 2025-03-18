@@ -1,0 +1,55 @@
+# ❄️ Snowflake Architecture Overview  
+
+> **Snowflake** is a cloud-native data platform designed for **high performance, scalability, and concurrency**.  
+> Its unique multi-layered architecture separates **storage, compute, and services**, ensuring **flexibility and efficiency**.
+
+---
+
+## 🚀 Key Architectural Layers  
+
+Snowflake consists of **three main layers**, each handling different responsibilities:
+
+### 🏦 1. **Storage Layer**  
+✅ **Centralized Data Repository** stored in cloud-based storage (AWS S3, Azure Blob, GCP Storage)  
+✅ **Columnar Data Format** for optimized compression and fast retrieval  
+✅ **Automated Data Management** with encryption, backups, and replication  
+
+📌 *Benefits:* High availability, low-cost storage, and optimized performance.
+
+---
+
+### 💻 2. **Compute Layer (Virtual Warehouses)**  
+⚡ **Independent Virtual Warehouses** for query execution  
+⚡ **Workload Isolation** ensures multiple queries don’t interfere with each other  
+⚡ **Auto-Scaling** to match demand dynamically  
+
+📌 *Benefits:* Performance efficiency, parallel execution, and on-demand scaling.
+
+---
+
+### 🔍 3. **Cloud Services Layer**  
+🔹 **Query Parsing & Optimization** to improve performance  
+🔹 **Metadata Management** for tracking schemas, users, and queries  
+🔹 **Security & Access Control** with authentication & governance  
+
+📌 *Benefits:* Smart orchestration, cost efficiency, and enhanced security.
+
+---
+
+## 🎯 Why Snowflake?  
+
+✅ **Elastic Scaling:** Scale storage & compute independently 🔄  
+✅ **Concurrency:** Run multiple queries simultaneously 🏎️  
+✅ **Zero Maintenance:** Fully managed, no infrastructure worries ⚙️  
+✅ **Multi-Cloud Support:** Runs on **AWS, Azure, and GCP** ☁️  
+✅ **Pay-As-You-Go Pricing:** Pay only for what you use 💰  
+
+---
+
+## 📊 Snowflake Architecture Diagram  
+
+```mermaid
+graph TD;
+  A[❄️ Centralized Storage] -->|Stores Data| B[🔍 Cloud Services Layer]
+  B -->|Manages Queries| C[⚡ Compute Layer (Virtual Warehouses)]
+  C -->|Executes Queries| D[📈 User Queries]
