@@ -11,69 +11,80 @@ When we write code, we want it to be **not just correct**, but also **efficient*
 - ⏱️ **Time Complexity** – How long does the algorithm take to run?
 - 🧠 **Space Complexity** – How much memory does it use?
 
-It doesn’t measure actual time or memory in seconds or bytes — instead, it focuses on how performance grows when the input gets larger.
-
-Think of it like measuring how a car performs when we add more passengers — not the exact speed, but how the weight affects the drive.
+It focuses on **growth patterns**, not exact timings.
 
 ---
 
-## 🔢 Common Big O Time Complexities (With Python Examples)
+## 📈 Visual Guide to Time Complexities
+
+This chart shows how different algorithms scale as the number of elements (`n`) increases. The green areas are efficient; red areas are slow and expensive.
+
+![Big-O Complexity Chart](https://raw.githubusercontent.com/bakshitarun/Learn/main/Python/images/big_o_complexity_chart.png)
+
+---
+
+## 🔢 Common Time Complexities (With Python Examples)
 
 | Notation     | Name           | What It Means                               | Example in Python                    |
 |--------------|----------------|----------------------------------------------|--------------------------------------|
 | **O(1)**     | Constant Time  | Same time no matter the input size           | `my_list[0]` (accessing an index)    |
 | **O(log n)** | Logarithmic    | Gets faster as it divides input              | Binary search on a sorted list       |
 | **O(n)**     | Linear         | Time grows directly with input size          | Looping through a list               |
-| **O(n log n)**| Linearithmic  | Slightly slower than linear for large inputs | Efficient sorting: `sorted(my_list)` |
-| **O(n²)**    | Quadratic      | Gets much slower with more input             | Nested loops (e.g. bubble sort)      |
-| **O(2ⁿ)**    | Exponential    | Grows super fast – not practical for large n | Naive Fibonacci recursion            |
+| **O(n log n)**| Linearithmic  | Efficient sorting                            | `sorted(my_list)`                    |
+| **O(n²)**    | Quadratic      | Nested loops                                 | Bubble sort                          |
+| **O(2ⁿ)**    | Exponential    | Recursion (Fibonacci)                        | `fib(n)` with no memoization         |
 
 ---
 
-## 📈 How Do These Look Visually?
+## 🗃️ Time Complexities in Data Structures
 
-The chart below shows how these time complexities grow as your input (n) increases:
+This table shows the **average and worst-case complexities** of operations on common data structures:
 
-![Big O Graphs](attachment:/mnt/data/A_2D_digital_infographic_titled_"Understanding_Big.png)
+![Common Data Structure Operations](https://raw.githubusercontent.com/bakshitarun/Learn/main/Python/images/data_structure_operations.png)
 
-Notice how quickly **O(n²)** and **O(2ⁿ)** blow up? That’s why choosing the right algorithm matters!
+---
+
+## 🧮 Array Sorting Algorithms
+
+Different sorting algorithms have different best, average, and worst-case performance. This chart summarizes them all:
+
+![Array Sorting Algorithms](https://raw.githubusercontent.com/bakshitarun/Learn/main/Python/images/array_sorting_algorithms.png)
 
 ---
 
 ## 🧑‍🏫 Why Should You Care as a Data Science Student?
 
-Whether you're building a data pipeline or training a machine learning model:
-- 🐌 You don’t want slow loops or inefficient logic.
-- 📊 Datasets grow fast — your algorithm should handle them.
-- 🧪 Algorithms = models = code. Performance matters.
+Whether you're:
+- Building a recommendation engine,
+- Processing large datasets, or
+- Training models on millions of rows...
+
+Efficiency matters.
 
 Knowing Big O helps you:
-- Debug slow code
-- Choose the right approach
-- Communicate complexity clearly in interviews
+- Identify slow code
+- Choose the right data structure
+- Write scalable, production-grade algorithms
 
 ---
 
-## 🎓 Final Tip: Focus on Patterns
+## 🎓 Final Tip: Don’t Memorize, Recognize Patterns
 
-Don’t memorize Big O like a math formula. Instead, **recognize the pattern** in the way your code runs. For example:
-- One loop = **O(n)**
-- A loop inside another loop = **O(n²)**
-- Recursion that splits the input = **O(log n)** or **O(n log n)**
+Ask:
+- **How many loops do I have?**
+- **Does my function call itself (recursion)?**
+- **Am I repeatedly scanning or sorting data?**
 
-Use tools like `timeit` in Python to test your code’s performance as you go.
-
----
-
-## 📌 Want to Practice?
-
-Try analyzing the time complexity of:
-- A function that finds the maximum in a list
-- A function that checks for duplicates using two loops
-- A recursive Fibonacci calculator
+Use Python’s `timeit` or built-in profiling tools to test your code’s real-world behavior.
 
 ---
 
-Keep experimenting and asking **“how does this scale?”** — that’s how you level up!
+## 📌 Practice Questions
 
-Happy coding, team! 🎉🐍💻
+1. Write a function that finds the minimum value in a list. What’s the time complexity?
+2. Compare a linear search and binary search for finding an element.
+3. Rewrite recursive Fibonacci using memoization. How does its Big O change?
+
+---
+
+Happy learning and coding! 🐍📈💡
